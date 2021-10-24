@@ -1,4 +1,6 @@
-﻿using APIUsers_MTWDM21Fork.Models;
+﻿using System.Collections.Generic;
+using System.Linq;
+using APIUsers_MTWDM21Fork.Models;
 
 
 namespace APIUsers_MTWDM21Fork.Services
@@ -40,26 +42,6 @@ namespace APIUsers_MTWDM21Fork.Services
         public User GetUser(int ID)
         {
             return _userDbContext.Users.FirstOrDefault(x => x.user_id == ID);
-        }
-
-        public Models.User AddUser(Models.User user)
-        {
-            throw new NotImplementedException();
-        }
-
-        List<Models.User> IUserService.GetUsers()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void UpdateUser(Models.User user)
-        {
-            throw new NotImplementedException();
-        }
-
-        Models.User IUserService.GetUser(int ID)
-        {
-            throw new NotImplementedException();
         }
     }
 }
